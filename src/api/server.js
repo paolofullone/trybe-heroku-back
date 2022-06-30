@@ -1,5 +1,8 @@
-const app = require('./app');
+//Arquivo server.js
 
-const PORT = process.env.PORT || 3000;
+const app = require('./app');
+require('dotenv/config');
+
+const PORT = process.env.DB_PORT || 3000;
 
 app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`));
