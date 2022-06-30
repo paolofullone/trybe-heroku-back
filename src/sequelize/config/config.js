@@ -1,32 +1,24 @@
-// Arquivo config.js
-
-require('dotenv/config');
-
-const { DB_HOST, DB_PASSWORD, DB_DATABASE, DB_USERNAME, DB_PORT } = process.env;
-
+require('dotenv').config();
 module.exports = {
   development: {
-    username: DB_USERNAME,
-    password: DB_PASSWORD,
-    database: DB_DATABASE,
-    host: DB_HOST,
-    port: DB_PORT,
-    dialect: 'postgres',
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: 'postgres'
   },
   test: {
-    username: DB_USERNAME,
-    password: DB_PASSWORD,
-    database: DB_DATABASE,
-    host: DB_HOST,
-    port: DB_PORT,
-    dialect: 'postgres',
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: 'postgres'
   },
   production: {
-    username: DB_USERNAME,
-    password: DB_PASSWORD,
-    database: DB_DATABASE,
-    host: DB_HOST,
-    port: DB_PORT,
-    dialect: 'postgres',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: 'postgres'
   },
 };
