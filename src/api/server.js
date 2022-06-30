@@ -1,4 +1,4 @@
-//Arquivo server.js
+// Arquivo server.js
 
 const app = require('./app');
 require('dotenv/config');
